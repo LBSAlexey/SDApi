@@ -41,29 +41,29 @@ def call_api(**payload):
 
 prompt = get_prompt("cute cat", "")
 
-
-payload = {
-    "prompt": prompt["prompt"],  # extra networks also in prompts
-    "negative_prompt": prompt["neg_prompt"],
-    "seed": 1,
-    "steps": 20,
-    "width": 576,
-    "height": 576,
-    "cfg_scale": 7,
-    "sampler_name": "DPM++ 2M Karras",
-    "n_iter": 1,
-    "batch_size": 1,
-}
-
-option_payload = {
-  "sd_model_checkpoint": "dreamshaper_8.safetensors [879db523c3]",
-}
-
-model_sd(option_payload)
-call_api(**payload)
-
-init_images = [
-  encode_file_to_base64(r"B:\path\to\img_1.png"),
-  # encode_file_to_base64(r"B:\path\to\img_2.png"),
-  # "https://image.can/also/be/a/http/url.png",
-]
+if __name__ == "__main__";
+  payload = {
+      "prompt": prompt["prompt"],  # extra networks also in prompts
+      "negative_prompt": prompt["neg_prompt"],
+      "seed": 1,
+      "steps": 20,
+      "width": 576,
+      "height": 576,
+      "cfg_scale": 7,
+      "sampler_name": "DPM++ 2M Karras",
+      "n_iter": 1,
+      "batch_size": 1,
+  }
+  
+  option_payload = {
+    "sd_model_checkpoint": "dreamshaper_8.safetensors [879db523c3]",
+  }
+  
+  model_sd(option_payload)
+  call_api(**payload)
+  
+  init_images = [
+    encode_file_to_base64(r"B:\path\to\img_1.png"),
+    # encode_file_to_base64(r"B:\path\to\img_2.png"),
+    # "https://image.can/also/be/a/http/url.png",
+  ]
